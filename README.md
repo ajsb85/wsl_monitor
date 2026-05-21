@@ -58,8 +58,8 @@ graph TD
 | Feature | Specification | Mechanism / Under-the-Hood |
 | :--- | :--- | :--- |
 | **RAM Cache Reclaim** | Manual / Automated drop cache control | Non-interactive root execution of `sysctl -w vm.drop_caches=3` |
-| **Windows Config Sync** | Reads & modifies `.wslconfig` GUI-side | Raw INI Parser reading and writing to `/mnt/c/Users/gbast/.wslconfig` |
-| **Disk Compactor** | PowerShell script builder | Generates standard `diskpart` script at `C:\Users\gbast\compact-wsl.ps1` |
+| **Windows Config Sync** | Reads & modifies `.wslconfig` GUI-side | Raw INI Parser reading and writing to `/mnt/c/Users/<username>/.wslconfig` |
+| **Disk Compactor** | PowerShell script builder | Generates standard `diskpart` script at `C:\Users\<username>\compact-wsl.ps1` |
 | **Process Manager** | Real-time filter & termination | Parsed `/proc/[pid]/stat` metrics with standard/sudo `kill -9` hooks |
 | **Telemetry System** | Live graphs & hardware logs | Polled parsing of `/proc/stat`, `/proc/meminfo`, `/proc/net/dev` |
 | **Aesthetics** | Premium High-Fidelity Glassmorphism | Dark HSL color tokens with custom Canvas graph renderers |
