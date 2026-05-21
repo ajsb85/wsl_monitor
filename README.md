@@ -10,29 +10,29 @@ The application is architected around a non-blocking background isolate worker t
 
 ```mermaid
 graph TD
-    subgraph Windows Host
+    subgraph WINDOWS_SUB ["Windows Host"]
         W1[".wslconfig Settings File"]
         W2["compact-wsl.ps1 script"]
     end
 
-    subgraph WSL2 Linux VM
-        subgraph Flutter Frontend UI (Main Isolate)
+    subgraph WSL_SUB ["WSL2 Linux VM"]
+        subgraph UI_SUB ["Flutter Frontend UI (Main Isolate)"]
             UI["Dashboard Controller"]
             G1["Resource Graphs (CPU, RAM, Net, Disk)"]
             P1["Active Processes Panel"]
             O1["WSL Optimizer Control Panel"]
         end
 
-        subgraph Background Isolate (Secondary Thread)
+        subgraph WORKER_SUB ["Background Isolate (Secondary Thread)"]
             MW["MonitorWorker Isolate"]
             PP["ProcParser (Reads /proc files)"]
         end
 
-        subgraph System Execution Layer
+        subgraph EXEC_SUB ["System Execution Layer"]
             WA["WslActions Utilities"]
         end
         
-        subgraph Linux Kernel Interfaces
+        subgraph KERNEL_SUB ["Linux Kernel Interfaces"]
             PK["/proc/stat, /proc/meminfo, /proc/net/dev, /proc/diskstats"]
             KC["sysctl vm.drop_caches=3"]
         end
