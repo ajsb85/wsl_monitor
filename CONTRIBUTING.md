@@ -15,6 +15,7 @@ We do not use long-lived feature branches, git flow, or complex staging setups. 
    - `fix: correct /proc parsing integer overflow`
    - `docs: update setup guidelines`
 3. **Frequent Syncing**: Pull and rebase frequently to prevent merge conflicts.
+4. **Validation First**: Always run `flutter analyze` and `flutter test` before submitting changes.
 
 ---
 
@@ -62,11 +63,12 @@ tbdflow commit
 
 ## 🔬 Testing Guidelines
 Before proposing a pull request or completing a branch:
-1. Ensure all static analysis checks pass cleanly:
+1. **Static Analysis**: Ensure all static analysis checks pass cleanly:
    ```bash
    flutter analyze
    ```
-2. Ensure the unit/widget test suite passes:
+2. **Unit & Widget Testing**: Run the test suite:
    ```bash
    flutter test
    ```
+   *We encourage adding new test cases for any new functionality.*

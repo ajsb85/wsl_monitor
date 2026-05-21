@@ -23,12 +23,12 @@ class ResourceGraph extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.35),
+        color: Colors.black.withValues(alpha: 0.35),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withOpacity(0.15), width: 1.5),
+        border: Border.all(color: color.withValues(alpha: 0.15), width: 1.5),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.03),
+            color: color.withValues(alpha: 0.03),
             blurRadius: 10,
             spreadRadius: 2,
           ),
@@ -44,7 +44,7 @@ class ResourceGraph extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  color: color.withOpacity(0.7),
+                  color: color.withValues(alpha: 0.7),
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.5,
@@ -62,7 +62,7 @@ class ResourceGraph extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
-                          color: color.withOpacity(0.4),
+                          color: color.withValues(alpha: 0.4),
                           blurRadius: 8,
                         ),
                       ],
@@ -72,7 +72,7 @@ class ResourceGraph extends StatelessWidget {
                   Text(
                     unit,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.4),
+                      color: Colors.white.withValues(alpha: 0.4),
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -126,7 +126,7 @@ class _GraphPainter extends CustomPainter {
 
     // Draw grid lines (horizontal 25%, 50%, 75%)
     final gridPaint = Paint()
-      ..color = Colors.white.withOpacity(0.06)
+      ..color = Colors.white.withValues(alpha: 0.06)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0;
 
@@ -172,8 +172,8 @@ class _GraphPainter extends CustomPainter {
         Offset(0, 0),
         Offset(0, height),
         [
-          color.withOpacity(0.22),
-          color.withOpacity(0.0),
+          color.withValues(alpha: 0.22),
+          color.withValues(alpha: 0.0),
         ],
       )
       ..style = PaintingStyle.fill;
@@ -186,7 +186,7 @@ class _GraphPainter extends CustomPainter {
     final lastOffset = getOffset(lastIndex, history.last);
 
     final glowPaint = Paint()
-      ..color = color.withOpacity(0.3)
+      ..color = color.withValues(alpha: 0.3)
       ..style = PaintingStyle.fill
       ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4.0);
     canvas.drawCircle(lastOffset, 6.0, glowPaint);

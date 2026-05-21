@@ -75,21 +75,23 @@ sudo apt update
 sudo apt install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev
 ```
 
-### System-Wide Global Command Setup
-The Flutter and Dart SDK binaries, along with the `wsl_monitor` production executable, are deployed under `/usr/local/bin`:
-- Run `wsl_monitor` directly from any console window to launch the application.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/wsl_monitor.git
+   cd wsl_monitor
+   ```
+2. Fetch dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+### Running the App
+- **Debug:** `flutter run -d linux`
+- **Release Build:** `flutter build linux --release`
+The output executable will be built at `build/linux/x64/release/bundle/wsl_monitor`.
 
 ---
 
-## 🛠️ Build and Compilation
-
-### Run in Debug mode
-```bash
-flutter run -d linux
-```
-
-### Build Release Bundle
-```bash
-flutter build linux --release
-```
-The output executable will be built at `build/linux/x64/release/bundle/wsl_monitor`.
+## 🤝 Contribution Guide
+We welcome contributions! Please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) to ensure your changes align with our project standards, including the use of `tbdflow` for Trunk-Based Development.

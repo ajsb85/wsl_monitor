@@ -259,10 +259,10 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
             decoration: BoxDecoration(
-              color: isSelected ? Colors.white.withOpacity(0.08) : Colors.transparent,
+              color: isSelected ? Colors.white.withValues(alpha: 0.08) : Colors.transparent,
               borderRadius: BorderRadius.circular(12),
               border: isSelected
-                  ? Border.all(color: Colors.white.withOpacity(0.1), width: 1)
+                  ? Border.all(color: Colors.white.withValues(alpha: 0.1), width: 1)
                   : null,
             ),
             child: Row(
@@ -292,7 +292,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       width: 240,
       decoration: BoxDecoration(
         color: const Color(0xFF10121A),
-        border: Border(right: BorderSide(color: Colors.white.withOpacity(0.05), width: 1.5)),
+        border: Border(right: BorderSide(color: Colors.white.withValues(alpha: 0.05), width: 1.5)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -393,7 +393,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       decoration: BoxDecoration(
         color: const Color(0xFF0F111A),
-        border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.05), width: 1.5)),
+        border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha: 0.05), width: 1.5)),
       ),
       child: Row(
         children: [
@@ -512,7 +512,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                   decoration: BoxDecoration(
                     color: const Color(0xFF141822),
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.white.withOpacity(0.04)),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -537,9 +537,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                               return Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                 decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.2),
+                                  color: Colors.black.withValues(alpha: 0.2),
                                   borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(color: Colors.white.withOpacity(0.03)),
+                                  border: Border.all(color: Colors.white.withValues(alpha: 0.03)),
                                 ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -554,7 +554,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                                             borderRadius: BorderRadius.circular(2),
                                             child: LinearProgressIndicator(
                                               value: usage / 100,
-                                              backgroundColor: Colors.white.withOpacity(0.05),
+                                              backgroundColor: Colors.white.withValues(alpha: 0.05),
                                               color: const Color(0xFF00F2FE),
                                               minHeight: 4,
                                             ),
@@ -584,7 +584,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                   decoration: BoxDecoration(
                     color: const Color(0xFF141822),
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.white.withOpacity(0.04)),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -657,7 +657,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
               backgroundColor: const Color(0xFF141822),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
-                side: BorderSide(color: Colors.white.withOpacity(0.05)),
+                side: BorderSide(color: Colors.white.withValues(alpha: 0.05)),
               ),
               title: Row(
                 children: const [
@@ -738,7 +738,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       decoration: BoxDecoration(
         color: const Color(0xFF141822),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.04)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
       ),
       padding: const EdgeInsets.all(16),
       child: Column(
@@ -764,9 +764,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.2),
+                    color: Colors.black.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.white.withOpacity(0.05)),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
                   ),
                   child: TextField(
                     controller: _processSearchController,
@@ -805,7 +805,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
           Container(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.02),
+              color: Colors.white.withValues(alpha: 0.02),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Row(
@@ -824,7 +824,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
             child: RepaintBoundary(
               child: ListView.separated(
                 itemCount: filteredProcesses.length,
-                separatorBuilder: (context, index) => Divider(height: 1, color: Colors.white.withOpacity(0.03)),
+                separatorBuilder: (context, index) => Divider(height: 1, color: Colors.white.withValues(alpha: 0.03)),
                 itemBuilder: (context, index) {
                   final proc = filteredProcesses[index];
                   return Container(
@@ -928,7 +928,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       decoration: BoxDecoration(
         color: const Color(0xFF141822),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.04)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -938,7 +938,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00F2FE).withOpacity(0.1),
+                  color: const Color(0xFF00F2FE).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(Icons.memory, color: Color(0xFF00F2FE), size: 24),
@@ -983,7 +983,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                           ? []
                           : [
                               BoxShadow(
-                                color: const Color(0xFF00F2FE).withOpacity(0.2),
+                                color: const Color(0xFF00F2FE).withValues(alpha: 0.2),
                                 blurRadius: 12,
                                 offset: const Offset(0, 4),
                               ),
@@ -1030,9 +1030,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
               decoration: BoxDecoration(
-                color: const Color(0xFF10AC84).withOpacity(0.08),
+                color: const Color(0xFF10AC84).withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF10AC84).withOpacity(0.15)),
+                border: Border.all(color: const Color(0xFF10AC84).withValues(alpha: 0.15)),
               ),
               child: Row(
                 children: [
@@ -1086,7 +1086,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       decoration: BoxDecoration(
         color: const Color(0xFF141822),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.04)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1096,7 +1096,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF10AC84).withOpacity(0.1),
+                  color: const Color(0xFF10AC84).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(Icons.disc_full_outlined, color: Color(0xFF10AC84), size: 24),
@@ -1140,7 +1140,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                           ? []
                           : [
                               BoxShadow(
-                                color: const Color(0xFF10AC84).withOpacity(0.2),
+                                color: const Color(0xFF10AC84).withValues(alpha: 0.2),
                                 blurRadius: 12,
                                 offset: const Offset(0, 4),
                               ),
@@ -1174,9 +1174,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.3),
+                color: Colors.black.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.white.withOpacity(0.04)),
+                border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1222,7 +1222,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       decoration: BoxDecoration(
         color: const Color(0xFF141822),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.04)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1232,7 +1232,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFB927FC).withOpacity(0.1),
+                  color: const Color(0xFFB927FC).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(Icons.settings, color: Color(0xFFB927FC), size: 24),
@@ -1274,9 +1274,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withOpacity(0.05)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -1306,9 +1306,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withOpacity(0.05)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -1338,9 +1338,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
           Container(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.15),
+              color: Colors.black.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withOpacity(0.02)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.02)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1355,7 +1355,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
                 ),
                 Switch(
                   value: _sparseVhdEnabled,
-                  activeColor: const Color(0xFFB927FC),
+                  activeThumbColor: const Color(0xFFB927FC),
                   onChanged: (val) {
                     setState(() {
                       _sparseVhdEnabled = val;
@@ -1418,9 +1418,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
         const SizedBox(height: 8),
         Container(
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.white.withOpacity(0.05)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
           ),
           child: TextField(
             controller: controller,
@@ -1443,9 +1443,9 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       return Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.15),
+          color: Colors.black.withValues(alpha: 0.15),
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white.withOpacity(0.02)),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.02)),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -1472,7 +1472,7 @@ class _MonitorDashboardState extends State<MonitorDashboard> {
       decoration: BoxDecoration(
         color: const Color(0xFF141822),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.04)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04)),
       ),
       padding: const EdgeInsets.all(24),
       child: Column(
